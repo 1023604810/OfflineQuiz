@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_practice"
+        android:icon="@drawable/ic_nav_practice"
+        android:title="@string/nav_practice" />
+    <item
+        android:id="@+id/tab_exam"
+        android:icon="@drawable/ic_nav_exam"
+        android:title="@string/nav_exam" />
+    <item
+        android:id="@+id/tab_wrong"
+        android:icon="@drawable/ic_nav_wrong"
+        android:title="@string/nav_wrong" />
+    <item
+        android:id="@+id/tab_favorite"
+        android:icon="@drawable/ic_nav_favorite"
+        android:title="@string/nav_favorite" />
+    <item
+        android:id="@+id/tab_stats"
+        android:icon="@drawable/ic_nav_stats"
+        android:title="@string/nav_stats" />
+</menu>

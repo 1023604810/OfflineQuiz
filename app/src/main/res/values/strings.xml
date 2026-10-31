@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">离线刷题助手</string>
+
+    <string name="nav_practice">练习</string>
+    <string name="nav_exam">模考</string>
+    <string name="nav_wrong">错题</string>
+    <string name="nav_favorite">收藏</string>
+    <string name="nav_stats">统计</string>
+
+    <string name="empty_bank_title">还没有题库</string>
+    <string name="empty_bank_desc">导入本地 JSON / CSV / Excel 文件，或一键导入内置题库，全部数据只保存在本机。</string>
+</resources>

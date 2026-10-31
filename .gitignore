@@ -1,0 +1,39 @@
+# ---------- 构建产物 / IDE ----------
+.gradle/
+build/
+*/build/
+app/build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ---------- 签名与发布（APK 内含题库数据，不提交） ----------
+*.jks
+*.keystore
+*.apk
+*.aab
+*.idsig
+/release/
+
+# ---------- 默认题库：任何题目数据都不得进入仓库 ----------
+# 内置题库资源（题目 JSON、无配图题删除清单等）
+/app/src/main/assets/questionbank/
+# 题库解析产物、人工解析、合并脚本等数据管道
+/tools/
+# 含题目正文 / 答案 / 删除清单的文档
+/docs/
+# 原始题库文件
+*.docx
+*.pdf
+
+# ---------- 依赖默认题库的测试（仅本地保留，不随仓库发布） ----------
+/app/src/test/java/com/example/offlinequiz/importer/BuiltinBankImportTest.java
+/app/src/test/java/com/example/offlinequiz/service/FigurelessCleanupTest.java
+
+# ---------- 运行期崩溃日志 ----------
+hs_err_pid*.log
+replay_pid*.log
