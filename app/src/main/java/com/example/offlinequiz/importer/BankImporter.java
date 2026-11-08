@@ -135,7 +135,7 @@ public class BankImporter {
         } else if ("multiple".equals(type)) {
             String letters = optionLetters(options);
             String ans = normalizeLetters(answer);
-            if (ans.isEmpty() || !letters.contains(ans)) {
+            if (ans.isEmpty() || !containsAllLetters(letters, ans)) {
                 result.error(row + "：多选题答案与选项不匹配（答案 " + answer + "），已跳过");
                 return null;
             }
@@ -235,6 +235,16 @@ public class BankImporter {
             }
         }
         return sb.toString();
+    }
+
+    /** Multi-select answers are not always contiguous ("ABD" is valid for options A-D). */
+    private static boolean containsAllLetters(String letters, String answer) {
+        for (int i = 0; i < answer.length(); i++) {
+            if (letters.indexOf(answer.charAt(i)) < 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /** Convenience for the UI thread wrapper: measures elapsed time for the summary. */
